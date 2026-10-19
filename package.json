@@ -1,0 +1,34 @@
+{
+  "name": "chesscom-stats-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Chess.com stats. Ask your AI assistant \"how did I do this month?\"",
+  "keywords": ["mcp", "model-context-protocol", "chess", "chess.com", "claude", "llm"],
+  "license": "MIT",
+  "author": "Patrick O'Reilly <oreilllypatrick@gmail.com> (https://www.patrickoreilly.dev)",
+  "homepage": "https://github.com/patrick-oreilly/chesscom-stats-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrick-oreilly/chesscom-stats-mcp.git"
+  },
+  "type": "module",
+  "bin": {
+    "chesscom-stats-mcp": "dist/index.js"
+  },
+  "files": ["dist"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test test/*.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  }
+}
